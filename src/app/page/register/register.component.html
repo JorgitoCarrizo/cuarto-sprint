@@ -1,0 +1,19 @@
+
+<app-navbar></app-navbar><br>
+
+
+<form [formGroup]="registerForm"  class="form-signin" (ngSubmit)="onRegister()">
+    <img style="padding: auto;" class="mb-4" src="../../../assets/wellcome.jpg" alt="" width="100%" height="auto">
+    <h1 class="h3 mb-3 font-weight-normal">Registrate</h1>
+    <label for="inputEmail" class="sr-only">Usuario</label>
+    
+    
+    <input  type="email" class="form-control" placeholder="Usuario"  formControlName="email">
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password">
+    
+    <button class="btn btn-lg btn-primary btn-block" type="submit" >ingresar</button>
+   
+</form>
+

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "basededatos-sala": {
+      "hosting": {
+        "segundoSprint": [
+          "basededatos-sala"
+        ]
+      }
+    }
+  }
+}

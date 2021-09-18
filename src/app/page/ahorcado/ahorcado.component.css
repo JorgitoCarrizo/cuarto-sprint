@@ -1,0 +1,23 @@
+.contenedor--centrado{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    width:100%;
+}
+
+
+.contenedor--Botones{
+    padding: 2px;
+    display: inline-block;
+    text-align: center;
+    border: gray solid 1px;
+    
+    
+}
+
+
+.botones--letras{
+
+    margin: 4px;
+    
+}

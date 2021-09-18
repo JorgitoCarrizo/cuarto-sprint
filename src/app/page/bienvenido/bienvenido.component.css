@@ -1,0 +1,79 @@
+/* Show it's not fixed to the top */
+body {
+    min-height: 75rem;
+    background-color: grey;
+    
+  }
+
+
+.otro-nav-link:hover{
+    cursor: pointer
+}
+
+.imagenFondo{
+    background-image: url("../../../assets/inicio.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+}
+
+
+
+.card-img-top{
+    background-size: cover;
+    
+}
+
+.card-body{
+    text-align: center;
+    
+}
+
+
+
+
+
+
+.botonjuegos{
+    border-radius: 70px;
+    background-image: url("../../../assets/ahorcado.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+
+.sectionBotones--juegos{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.vermas{
+    border-radius: 70px;
+    height: 50px;
+    width: 150px;
+    background-color: blueviolet;
+    color: rgb(255, 255, 255);
+}
+
+@media (min-width: 768px) {
+    .sectionBotones--juegos{
+        margin-bottom:20px;
+    }
+    .contenedor-juegos{
+        display: grid;  
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+    
+}
