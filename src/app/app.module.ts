@@ -15,6 +15,12 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
+import { Modal } from 'bootstrap';
+import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import * as $ from "jquery";
+import * as bootstrap from "bootstrap";
+
+
 
 @NgModule({
   declarations: [
@@ -26,7 +32,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AhorcadoComponent,
     RegisterComponent,
     NavbarComponent,
-    
+ 
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule    
+    AngularFireAuthModule,
+    NgbModule,
+    NgbModalModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

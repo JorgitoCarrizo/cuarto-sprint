@@ -1,42 +1,78 @@
 
 
+<app-navbar></app-navbar>
 
-
-
-
-
-
-
-<div class="contenedor--centrado">
-
-    <div class="contenedor--Botones">
-        <button id="Q" class="botones--letras btn btn-info">Q</button>
-        <button id="W" class="botones--letras btn btn-info">W</button>
-        <button id="E" class="botones--letras btn btn-info">E</button>
-        <button id="R" class="botones--letras btn btn-info">R</button>
-        <button id="T" class="botones--letras btn btn-info">T</button>
-        <button id="Y" class="botones--letras btn btn-info">Y</button>
-        <button id="U" class="botones--letras btn btn-info">U</button>
-        <button id="I" class="botones--letras btn btn-info">I</button>
-        <button id="O" class="botones--letras btn btn-info">O</button>
-        <button id="P" class="botones--letras btn btn-info">P</button><br>
-        <button id="A" class="botones--letras btn btn-info">A</button>
-        <button id="S" class="botones--letras btn btn-info">S</button>
-        <button id="D" class="botones--letras btn btn-info">D</button>
-        <button id="F" class="botones--letras btn btn-info">F</button>
-        <button id="G" class="botones--letras btn btn-info">G</button>
-        <button id="H" class="botones--letras btn btn-info">H</button>
-        <button id="J" class="botones--letras btn btn-info">J</button>
-        <button id="K" class="botones--letras btn btn-info">K</button>
-        <button id="L" class="botones--letras btn btn-info">L</button>
-        <button id="Ñ" class="botones--letras btn btn-info">Ñ</button><br>
-        <button id="Z" class="botones--letras btn btn-info">Z</button>
-        <button id="X" class="botones--letras btn btn-info">X</button>
-        <button id="C" class="botones--letras btn btn-info">C</button>
-        <button id="V" class="botones--letras btn btn-info">V</button>
-        <button id="B" class="botones--letras btn btn-info">B</button>
-        <button id="B" class="botones--letras btn btn-info">N</button>
-        <button id="B" class="botones--letras btn btn-info">M</button>
+<div class="mymodal" tabindex="-1" role="dialog" id="mymodal" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">WINNER!!!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)=CloseModal()>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2>FELICITACIONES GANASTE!!!</h2>
+        </div>
+        <div style="display: block;" class="modal-footer">
+          <P>¿quieres jugar otra vez?</P>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="CloseModal()">POR SUPUESTO!!!</button>
+          <button type="button" class="btn btn-secondary">no, volver a inicio</button>
+        </div>
+      </div>
     </div>
+  </div> 
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+  
+        
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/path/to/bootstrap/js/bootstrap.min.js"></script>
+<div class="contenedor--centrado">
+    <img src="../../../assets/ahorcado/{{numeroErrores}}.png" alt="" style="width: 30%;">
+    
+    <h1 style="font-size: 120px;letter-spacing: 3rem;">{{palabraX}}</h1>
 </div>
+
+<div class="contenedor--centrado" id="contenedor-central">
+    
+        <div id="botonera" class="contenedor--Botones">
+            <input type="button" id="Q" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="Q">
+            <input type="button" id="W" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="W">
+            <input type="button" id="E" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="E">
+            <input type="button" id="R" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="R">
+            <input type="button" id="T" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="T">
+            <input type="button" id="Y" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="Y">
+            <input type="button" id="U" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="U">
+            <input type="button" id="I" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="I">
+            <input type="button" id="O" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="O">
+            <input type="button" id="P" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="P"><br>
+            <input type="button" id="A" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="A">
+            <input type="button" id="S" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="S">
+            <input type="button" id="D" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="D">
+            <input type="button" id="F" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="F">
+            <input type="button" id="G" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="G">
+            <input type="button" id="H" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="H">
+            <input type="button" id="J" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="J">
+            <input type="button" id="K" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="K">
+            <input type="button" id="L" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="L">
+            <input type="button" id="Ñ" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="Ñ"><br>
+            <input type="button" id="Z" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="Z">
+            <input type="button" id="X" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="X">
+            <input type="button" id="C" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="C">
+            <input type="button" id="V" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="V">
+            <input type="button" id="B" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="B">
+            <input type="button" id="N" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="N">
+            <input type="button" id="M" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="M">
+        
+        </div>
+   
+</div>
+
+<hr>
+
+
+
+

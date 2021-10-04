@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AhorcadoComponent } from './page/ahorcado/ahorcado.component';
 import { BienvenidoComponent } from './page/bienvenido/bienvenido.component';
 import { ErrorComponent } from './page/error/error.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'quienSoy',component:QuienSoyComponent},
   {path:'ahorcado',component:AhorcadoComponent},
   {path:'register',component:RegisterComponent},
+  
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 

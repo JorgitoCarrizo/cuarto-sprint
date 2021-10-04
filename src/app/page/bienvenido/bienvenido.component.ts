@@ -26,7 +26,7 @@ export class BienvenidoComponent implements OnInit {
   }
 
   ahorcado(){
-    
+    this.rutas.navigate(['/ahorcado']);
   }
   
   

@@ -1,8 +1,23 @@
 .contenedor--centrado{
-    position: absolute;
+    
+        
+    text-align: center;
+        top: 70%;
+        left: 30%;
+        width:100%;
+        
+}
+
+@media (min-width: 768px) {
+    
+    .contenedor--centrado{
+    text-align: center;
+
     top: 70%;
     left: 30%;
     width:100%;
+    }
+    
 }
 
 
@@ -20,4 +35,23 @@
 
     margin: 4px;
     
+}
+
+
+.imagenFondo{
+    background-image: url("../../../assets/inicio.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+}
+
+.mymodal{
+    position: absolute;
+    text-align: center;
+    top: 30%;    
+    width:100%;
+    display: none;
 }
