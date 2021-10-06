@@ -69,10 +69,12 @@ procesa(){
         this.numeroAciertos = this.numeroAciertos +1;
         if ( this.numeroAciertos == this.palabraRandom.length)
         {
-          console.log("GANASTE!");
-          this.showModal();
+          setTimeout(() => {
+            this.showModal();
           
           this.restart();
+          }, 1000);
+          
         }
       }
       
@@ -82,9 +84,11 @@ procesa(){
     this.numeroErrores = this.numeroErrores + 1;
     if(this.numeroErrores == 6)
     {
-      
-      console.log("perdiste");
+      setTimeout(() => {
+      this.showModalPerdiste();
       this.restart();
+      }, 1000);
+      
     }
   }
   
@@ -97,7 +101,7 @@ restartBoton(){
 
 restart(){
   this.numeroAciertos=0;
-  this.numeroErrores=0;
+  
   this.palabraRandom = this.palabras[Math.floor(Math.random() * this.palabras.length)];
   this.letra = '';
   this.palabraX='';
@@ -110,18 +114,32 @@ restart(){
   element.style.display = "none";
   var atras:any = document.getElementById('contenedor-central');
   atras.style.pointerEvents= "auto";
+  this.numeroErrores=0;
+  
 }
 
 
  showModal() {
   var element:any = document.getElementById('mymodal');  
   var atras:any = document.getElementById('contenedor-central');
-
   atras.style.pointerEvents= "none";
-
-  
   element.style.display = "block";
-  
+   
+}
+
+CloseModalPerdiste(){
+  var element:any = document.getElementById('mymodalPerdiste');  
+  element.style.display = "none";
+  var atras:any = document.getElementById('contenedor-central');
+  atras.style.pointerEvents= "auto";
+  this.numeroErrores=0;
+}
+
+showModalPerdiste(){
+  var element:any = document.getElementById('mymodalPerdiste');  
+  var atras:any = document.getElementById('contenedor-central');
+  atras.style.pointerEvents= "none";
+  element.style.display = "block";
 }
 
 irInicio(){
