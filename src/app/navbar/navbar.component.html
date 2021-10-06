@@ -4,7 +4,9 @@
     
     <div style="width: auto;" class=" navbar-collapse" id="navbarCollapse">
       <ul class=" navbar-nav mr-sm-2"> 
-        
+        <li>
+          <button class="btn btn-danger" *ngIf="isLogged" (click)=chatRoom()>CHAT ROOM</button>
+        </li>
         <li>
           <a class="nav-link" href="quienSoy" (click)=quienSoy() *ngIf="isLogged">¿Quien Soy? </a>
         </li>

@@ -38,14 +38,23 @@ body {
 
 
 .botonjuegos{
-    border-radius: 70px;
-    background-image: url("../../../assets/ahorcado.jpg");
+    border-radius: 70px;    
     background-size: cover;
     background-position: center;
     width: 250px;
     height: 250px;
     margin: 10px;
 }
+.ahorcado-button{
+    background-image: url("../../../assets/ahorcado.jpg");
+}
+.mYm-button{
+    background-image: url("../../../assets/MayorMenor/mayorMenor.png");
+}
+
+   
+
+ 
 
 .sectionBotones--juegos{
     display: flex;

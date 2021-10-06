@@ -59,9 +59,7 @@ nuevaPalabra(){
 
 procesa(){ 
 
- // var element:any = document.getElementById('Q');
-  //console.log(element.value);  
-  //console.log(this.letra);
+ 
   if (this.palabraRandom.includes(this.letra.toLowerCase()))
   {
     console.log("aparece");
@@ -124,6 +122,10 @@ restart(){
   
   element.style.display = "block";
   
+}
+
+irInicio(){
+  this.rutas.navigate(['/bienvenido']);
 }
 
 }

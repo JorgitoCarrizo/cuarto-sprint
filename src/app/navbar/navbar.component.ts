@@ -47,4 +47,8 @@ export class NavbarComponent implements OnInit {
     this.rutas.navigate(['/login']);
   }
 
+  chatRoom(){
+    this.rutas.navigate(['/chatRoom']);
+  }
+
 }

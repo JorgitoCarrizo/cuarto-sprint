@@ -19,7 +19,9 @@ import { Modal } from 'bootstrap';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import * as $ from "jquery";
 import * as bootstrap from "bootstrap";
-
+import { MayorMenorComponent } from './page/mayor-menor/mayor-menor.component';
+import { ChatRoomComponent } from './page/chat-room/chat-room.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import * as bootstrap from "bootstrap";
     AhorcadoComponent,
     RegisterComponent,
     NavbarComponent,
+    MayorMenorComponent,
+    ChatRoomComponent,
  
   ],
   imports: [
@@ -42,7 +46,8 @@ import * as bootstrap from "bootstrap";
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     NgbModule,
-    NgbModalModule
+    NgbModalModule,
+    HttpClientModule
     
 
   ],

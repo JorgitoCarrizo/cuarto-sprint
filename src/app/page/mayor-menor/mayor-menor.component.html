@@ -1,0 +1,55 @@
+
+
+<app-navbar></app-navbar>
+
+<div class="mymodal" tabindex="-1" role="dialog" id="mymodal" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">WINNER!!!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)=CloseModal()>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2>FELICITACIONES GANASTE!!!</h2>
+        </div>
+        <div style="display: block;" class="modal-footer">
+          <P>¿quieres jugar otra vez?</P>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="CloseModal()">POR SUPUESTO!!!</button>
+          <button type="button" class="btn btn-secondary" (click)="irInicio()">no, volver a inicio</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+  
+        
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/path/to/bootstrap/js/bootstrap.min.js"></script>
+
+<div class="back">
+    <div class="div-puntuacion">
+        <h1 class="h1-puntaje">GANADOS: <span style="color: green;">{{ganados}}</span></h1>
+        <h1 class="h1-puntaje">PERDIDO: <span style="color: red;">{{perdidos}}</span></h1>
+    </div>
+    <div class="contenedor-principal">
+        <h1 style="color: rgb(247, 247, 247);">{{estadoJuego}}</h1>
+        <div class="primerCarta cartas">
+            <img src="{{carta1}}" alt="">
+        </div>
+      
+    </div>
+
+    <div class="div-botones">
+        
+    <img class="botones-mym" src="../../../assets/MayorMenor/mayor.jpg" alt="MAYOR" (click)="getCartas();esMayor();">
+    <img class="botones-mym" src="../../../assets/MayorMenor/MENOR.jpg" alt="MENOR" (click)="getCartas();esMenor();">
+
+
+    </div>
+</div>
+

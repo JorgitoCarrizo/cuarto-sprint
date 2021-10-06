@@ -28,6 +28,10 @@ export class BienvenidoComponent implements OnInit {
   ahorcado(){
     this.rutas.navigate(['/ahorcado']);
   }
+
+  mayorMenor(){
+    this.rutas.navigate(['/mayorMenor'])
+  }
   
   
 }

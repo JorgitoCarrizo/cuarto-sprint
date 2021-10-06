@@ -17,7 +17,7 @@
         <div style="display: block;" class="modal-footer">
           <P>¿quieres jugar otra vez?</P>
           <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="CloseModal()">POR SUPUESTO!!!</button>
-          <button type="button" class="btn btn-secondary">no, volver a inicio</button>
+          <button type="button" class="btn btn-secondary" (click)="irInicio()">no, volver a inicio</button>
         </div>
       </div>
     </div>
@@ -30,13 +30,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="/path/to/bootstrap/js/bootstrap.min.js"></script>
-<div class="contenedor--centrado">
+<div  class="contenedor--centrado">
     <img src="../../../assets/ahorcado/{{numeroErrores}}.png" alt="" style="width: 30%;">
     
     <h1 style="font-size: 120px;letter-spacing: 3rem;">{{palabraX}}</h1>
 </div>
 
-<div class="contenedor--centrado" id="contenedor-central">
+<div  class="contenedor--centrado" id="contenedor-central">
     
         <div id="botonera" class="contenedor--Botones">
             <input type="button" id="Q" class="botones--letras btn btn-info" (click)="actionMethod($event);procesa();" value="Q">
