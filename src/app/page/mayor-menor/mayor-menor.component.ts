@@ -30,9 +30,14 @@ export class MayorMenorComponent implements OnInit {
 
     ) {
       let primerCarta :any = Math.floor(Math.random() * 52);
-      this.cartasArray.mezclar().subscribe();
-      this.cartasArray.obtenerCartas().subscribe((cartas:any)=>{
+      
+      setTimeout(() => {
+        
+      
+        
+        this.cartasArray.obtenerCartas().subscribe((cartas:any)=>{
         this.misCartas = cartas;
+        
         this.carta1 = cartas["cards"][primerCarta]["image"];
         let aux = cartas["cards"][primerCarta]["value"];
         if (!isNaN(aux)){
@@ -59,12 +64,12 @@ export class MayorMenorComponent implements OnInit {
         }
         
         
-        
-        
       },error => {console.log(error)})
-     }
+    }, 1000);
+   }
 
   ngOnInit(): void {
+    this.cartasArray.mezclar().subscribe();
   }
 
   
@@ -125,11 +130,17 @@ esMayor(){
   if (+this.valor1 <= +this.valor2)
   {
     this.ganados = this.ganados +1;
-    this.estadoJuego = "GANASTE!!!";
+    setTimeout(() => {
+      this.estadoJuego = "GANASTE!!!";
+    }, 500);
+    
   }
   else{
     this.perdidos = this.perdidos +1;
-    this.estadoJuego = "PERDISTE!!!";
+    setTimeout(() => {
+      this.estadoJuego = "PERDISTE!!!";
+    }, 500);
+    
   }
   this.valor1 = this.valor2;
   
@@ -139,11 +150,15 @@ esMenor(){
   if (+this.valor1 >= +this.valor2)
   {
     this.ganados = this.ganados +1;
-    this.estadoJuego = "GANASTE!!!";
+    setTimeout(() => {
+      this.estadoJuego = "GANASTE!!!";
+    }, 500);
   }
   else{
     this.perdidos = this.perdidos +1;
-    this.estadoJuego = "PERDISTE!!!";
+    setTimeout(() => {
+      this.estadoJuego = "PERDISTE!!!";
+    }, 500);
   }
   this.valor1 = this.valor2;
 }
