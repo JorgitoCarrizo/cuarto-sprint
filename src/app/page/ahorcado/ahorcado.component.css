@@ -5,44 +5,48 @@
 
 .contenedor--centrado{
     
-        
-    text-align: center;
+        display: block;
+        text-align: center;
         top: 70%;
-        left: 30%;
+        left: 500px;
         width:100%;
+        padding: 5px;
         
-        
+}
+.contenedor--Botones{
+    padding: 2px;
+    text-align: center;
+    border: gray solid 1px;
+    
 }
 
 @media (min-width: 768px) {
     
-    .contenedor--centrado{
-    text-align: center;
-
-    top: 70%;
-    left: 30%;
-    width:100%;
+    .contenedor--Botones{
+        
+        display: block;
+        
+        width: 450px;
+        
     }
-    
+    .panel{
+        
+        padding: 4px;
+        padding-bottom: 30px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        
+        
+    }
 }
-
-
-.contenedor--Botones{
-    padding: 2px;
-    display: inline-block;
-    text-align: center;
-    border: gray solid 1px;
-    
-    
-}
-
 
 .botones--letras{
 
     margin: 4px;
     
 }
-
 
 .imagenFondo{
     background-image: url("../../../assets/inicio.jpg");
@@ -52,11 +56,9 @@
     height: 100%;
     width: 100%;
     padding: 5%;
-    
+   
 }
-.contenedor-botones{
-    padding: 3rem;
-}
+
 
 .mymodal{
     position: absolute;

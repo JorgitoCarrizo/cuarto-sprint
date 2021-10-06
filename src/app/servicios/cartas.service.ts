@@ -14,14 +14,14 @@ export class CartasService {
 
   
   public mezclar(){
-    return this.http.get("http://deckofcardsapi.com/api/deck/m31yst1o69hp/shuffle/");
+    return this.http.get("https://deckofcardsapi.com/api/deck/m31yst1o69hp/shuffle/");
   }
 
   
 
   public obtenerCartas(){
     
-    return this.http.get("http://deckofcardsapi.com/api/deck/m31yst1o69hp/draw/?count=52");
+    return this.http.get("https://deckofcardsapi.com/api/deck/m31yst1o69hp/draw/?count=52");
     
   }
 }

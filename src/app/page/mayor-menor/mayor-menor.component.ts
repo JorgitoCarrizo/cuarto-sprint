@@ -59,7 +59,7 @@ export class MayorMenorComponent implements OnInit {
         }
         
         
-        console.log(cartas);
+        
         
       },error => {console.log(error)})
      }
@@ -96,7 +96,7 @@ getCartas(){
   let aux = this.misCartas["cards"][siguiente]["value"];
         if (!isNaN(aux)){
           this.valor2 =Number(aux);
-          console.log("numero");
+          
         }else
         {
           switch (aux){
@@ -117,7 +117,7 @@ getCartas(){
 
           }
         }
-        console.log(this.valor2);
+        
 
 }
 
