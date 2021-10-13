@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/auth/service/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { CartasService } from 'src/app/servicios/cartas.service';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { observable } from 'rxjs';
 
 @Component({
   selector: 'app-mayor-menor',
@@ -132,14 +133,14 @@ esMayor(){
     this.ganados = this.ganados +1;
     setTimeout(() => {
       this.estadoJuego = "GANASTE!!!";
-    }, 500);
+    }, 300);
     
   }
   else{
     this.perdidos = this.perdidos +1;
     setTimeout(() => {
       this.estadoJuego = "PERDISTE!!!";
-    }, 500);
+    }, 300);
     
   }
   this.valor1 = this.valor2;
@@ -152,13 +153,13 @@ esMenor(){
     this.ganados = this.ganados +1;
     setTimeout(() => {
       this.estadoJuego = "GANASTE!!!";
-    }, 500);
+    }, 300);
   }
   else{
     this.perdidos = this.perdidos +1;
     setTimeout(() => {
       this.estadoJuego = "PERDISTE!!!";
-    }, 500);
+    }, 300);
   }
   this.valor1 = this.valor2;
 }

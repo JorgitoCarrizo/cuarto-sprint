@@ -1,6 +1,6 @@
 
 <nav style="display: fle;" class="navbar navbar-expand-md navbar-dark bg-dark ">
-    <a style="width: 75%;" class="navbar-brand" href="bienvenido">INICIO</a>
+    <a style="width: 65%;" class="navbar-brand" href="bienvenido">INICIO</a>
     
     <div style="width: auto;" class=" navbar-collapse" id="navbarCollapse">
       <ul class=" navbar-nav mr-sm-2"> 
@@ -18,7 +18,8 @@
             <a class="nav-link" href="register" (click)=goRegister() *ngIf="!isLogged">Registrate </a>
         </li>
         <li *ngIf ="user$ | async as user">
-          <a class="nav-link">{{ user?.email }}</a>
+          <!-- <a class="nav-link">{{ user?.email }}</a> -->
+          <a class="nav-link">{{user?.email}}</a>
         </li>
         
       </ul>

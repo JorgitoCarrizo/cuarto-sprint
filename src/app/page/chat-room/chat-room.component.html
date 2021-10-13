@@ -1,1 +1,30 @@
-<p>chat-room works!</p>
+<div *ngIf="usuarioLogeado && !mostrarChat" class="chatIconContainer">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnvQgdnnU39a5XTSCMsi0uvUcEPo6zgIbmpA&usqp=CAU" alt="chat Icon" class="chatIcon" (click)="mostrarChat=true">
+</div>
+
+<div class="card text-center card-container" *ngIf="usuarioLogeado && mostrarChat">
+    <div class="card-header">
+      CHAT
+      <div class="closeIcon" (click)="mostrarChat=false">X</div>
+    </div>
+    <div class="card-body">
+      <div id="contenedorDeMensajes" class="contenedorDeMensajes h-100">
+          <p *ngFor="let mensaje of mensajes" class="msj p-2"
+          [ngClass]="(usuarioLogeado.email==mensaje.emisor)? 'enviado' : 'recibido'">
+              {{mensaje.texto}} <br>
+               <span class="datosMensaje">
+                 {{mensaje.emisor}}  -  {{mensaje.hora}}
+               </span>
+          </p>
+          
+      </div>
+    </div>
+    <form class="card-footer text-muted  input-group" (ngSubmit)="enviarMensaje()">
+        <input type="text" class="form-control" placeholder="Ingrese su mensaje" [(ngModel)]="nuevoMensaje" [ngModelOptions]="{standalone: true}">
+        <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">
+                <img class="imgEnviar" src="https://e7.pngegg.com/pngimages/541/795/png-clipart-email-forwarding-keyword-research-text-messaging-bounce-address-send-icon-angle-text-thumbnail.png" width="20px" alt="send message" (click)="enviarMensaje()">
+            </span>
+        </div>
+    </form>
+</div>

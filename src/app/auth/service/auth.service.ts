@@ -16,9 +16,10 @@ export class AuthService {
     
     
       const resultado = await this.afAuth.signInWithEmailAndPassword(email,pasword);
+      console.log(resultado);
       return resultado;
     
-      console.log("error");
+      
         
   }
   async register(email:string,pasword:string){
@@ -41,7 +42,7 @@ export class AuthService {
     }
     
   }
-   getCurrentUser(){
+  async getCurrentUser(){
      return this.afAuth.authState.pipe(first()).toPromise();
   }
 }

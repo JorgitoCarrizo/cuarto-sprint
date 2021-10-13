@@ -25,6 +25,7 @@ export class NavbarComponent implements OnInit {
     else{
       this.isLogged=false;
     }
+    
   }
 
   quienSoy(){
