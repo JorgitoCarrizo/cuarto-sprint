@@ -11,7 +11,7 @@ body {
 }
 
 .imagenFondo{
-    background-image: url("../../../assets/inicio.jpg");
+    background-image: url("https://wallpapercave.com/wp/9LJWhpZ.jpg");
     background-size: cover;
     background-position:center;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@ body {
     margin: 10px;
 }
 .ahorcado-button{
-    background-image: url("../../../assets/ahorcado.jpg");
+    background-image: url("https://store-images.microsoft.com/image/apps.61539.9007199266268723.0e9a482c-7807-42bd-a764-af6114115396.9c01fd6a-26be-4128-aabe-5a8301210e99?mode=scale&q=90&h=200&w=200&background=%23464646");
 }
 .mYm-button{
     background-image: url("../../../assets/MayorMenor/mayorMenor.png");
