@@ -1,12 +1,10 @@
 
 <nav style="display: fle;" class="navbar navbar-expand-md navbar-dark bg-dark ">
-    <a style="width: 65%;" class="navbar-brand" href="bienvenido">INICIO</a>
+    <a style="width: 80%;" class="navbar-brand" href="bienvenido">INICIO</a>
     
     <div style="width: auto;" class=" navbar-collapse" id="navbarCollapse">
       <ul class=" navbar-nav mr-sm-2"> 
-        <li>
-          <button class="btn btn-danger" *ngIf="isLogged" (click)=chatRoom()>CHAT ROOM</button>
-        </li>
+        
         <li>
           <a class="nav-link" href="quienSoy" (click)=quienSoy() *ngIf="isLogged">¿Quien Soy? </a>
         </li>

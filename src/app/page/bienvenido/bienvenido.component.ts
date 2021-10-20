@@ -30,7 +30,7 @@ export class BienvenidoComponent implements OnInit {
   }
 
   mayorMenor(){
-    this.rutas.navigate(['/mayorMenor'])
+    this.rutas.navigate(['/mayorMenor']);
   }
   
   

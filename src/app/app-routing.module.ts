@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'ahorcado',component:AhorcadoComponent},
   {path:'register',component:RegisterComponent},
   {path:'mayorMenor',component:MayorMenorComponent},
-  {path:'chatRoom',component:ChatRoomComponent},
+  
   
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
