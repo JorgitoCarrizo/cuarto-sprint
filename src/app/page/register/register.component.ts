@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/service/auth.service';
@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/auth/service/auth.service';
 export class RegisterComponent implements OnInit {
 
 
+  existeElUser!:boolean;
   registerForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
@@ -30,7 +31,34 @@ export class RegisterComponent implements OnInit {
     if (user){
       //redireccionar
       this.ruta.navigate(['/bienvenido']);
+    }else{
+      this.showModal();
     }
+    
   }
+
+   CloseModal() {
+  var element:any = document.getElementById('mymodal');  
+  element.style.display = "none";
+  var atras:any = document.getElementById('contenedor-central');
+  atras.style.pointerEvents= "auto";
+  document.getElementById('contenedor-central');
+  this.registerForm.reset();
+}
+
+
+ showModal() {
+  var element:any = document.getElementById('mymodal');  
+  var atras:any = document.getElementById('contenedor-central');
+  atras.style.pointerEvents= "none";
+  element.style.display = "block";
+  
+   
+}
+
+goLogin(){
+  this.ruta.navigate(['/login']);
+}
+
 
 }

@@ -39,7 +39,7 @@ export class ChatRoomComponent implements OnInit {
 
       aux.forEach(elemento => {
         this.mensajes.push(elemento.data());
-        console.log(elemento.data());
+        
       });
       this.numero = this.mensajes.length;
       
@@ -69,7 +69,7 @@ export class ChatRoomComponent implements OnInit {
       hora: tiempo.getHours() + ":" + tiempo.getMinutes()
     }
     this.mensajes.push(mensaje);
-    console.log(mensaje);
+    
     this.nuevoMensaje= '';
     
     this.numero= this.numero +1;

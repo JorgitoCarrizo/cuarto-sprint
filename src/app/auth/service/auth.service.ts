@@ -1,5 +1,5 @@
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Component } from '@angular/core';
 import firebase from 'firebase/compat/app';
 import { first } from 'rxjs/operators';
@@ -7,8 +7,8 @@ import { first } from 'rxjs/operators';
 
 @Injectable()
 export class AuthService {
-
-  //public user:User;
+  
+  
 
   constructor(public afAuth: AngularFireAuth) { }
 
@@ -24,15 +24,30 @@ export class AuthService {
   }
   async register(email:string,pasword:string){
     
-      const resultado = await this.afAuth.createUserWithEmailAndPassword(email,pasword);
+    
+
+    
+      const resultado:any = await this.afAuth.createUserWithEmailAndPassword(email,pasword).catch((error) =>{
+      const errorCode = error.code;
+      if (errorCode == 'auth/email-already-in-use'){
+        console.log("ERROR");
+        return;
+        }
+        else{
+          
+        }
+      });
       return resultado;
+    } 
     
     
-      console.log("error");
+    
+    
+      
       
     
     
-  }
+  
 
   async logOut(){
     try {
