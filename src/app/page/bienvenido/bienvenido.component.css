@@ -51,6 +51,14 @@ body {
 .mYm-button{
     background-image: url("../../../assets/MayorMenor/mayorMenor.png");
 }
+.preguntados-button{
+    background-image: url("https://img.utdstc.com/icon/5c7/260/5c7260e4a11ea9513637607e6ec763fe335ed3882c3dd9a41caf6f17240a7b7c:200");
+}
+.futbol-button{
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Purple91/v4/91/b6/f9/91b6f90a-1b04-5ea2-1d49-de4864361502/source/512x512bb.jpg");
+    background-size:90%;
+    background-repeat: no-repeat;
+}
 
    
 

@@ -7,6 +7,7 @@ import { ChatRoomComponent } from './page/chat-room/chat-room.component';
 import { ErrorComponent } from './page/error/error.component';
 import { LoginComponent } from './page/login/login.component';
 import { MayorMenorComponent } from './page/mayor-menor/mayor-menor.component';
+import { PreguntadosComponent } from './page/preguntados/preguntados.component';
 import { QuienSoyComponent } from './page/quien-soy/quien-soy.component';
 import { RegisterComponent } from './page/register/register.component';
 
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path:'ahorcado',component:AhorcadoComponent},
   {path:'register',component:RegisterComponent},
   {path:'mayorMenor',component:MayorMenorComponent},
-  
+  {path:'preguntados',component:PreguntadosComponent},
   
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];

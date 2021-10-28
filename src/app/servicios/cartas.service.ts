@@ -8,10 +8,7 @@ export class CartasService {
 
   constructor(private http:HttpClient) { }
   
-  deckID!:string;
-  mazo!:CartasService;
-  miMazo!:string
-
+  
   
   public mezclar(){
     return this.http.get("https://deckofcardsapi.com/api/deck/m31yst1o69hp/shuffle/");

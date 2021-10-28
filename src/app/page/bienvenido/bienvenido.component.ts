@@ -32,6 +32,11 @@ export class BienvenidoComponent implements OnInit {
   mayorMenor(){
     this.rutas.navigate(['/mayorMenor']);
   }
-  
-  
+  preguntados(){
+    this.rutas.navigate(['/preguntados']);
+  }
+  futbol(){
+
+  }
+
 }

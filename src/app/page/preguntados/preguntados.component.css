@@ -1,0 +1,63 @@
+.contenedor-principal{
+    background-image: url("https://i.pinimg.com/originals/67/c4/0f/67c40f0d41eb894446d9eefca75f2d6c.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding-left: 30%;
+    padding-top: 10%;
+    padding-bottom: 50%;
+    align-items: center;
+
+}
+
+.contenedor-pregunta{
+        
+        text-align: center;
+        border-radius: 20px;
+        border: 3px solid gray;
+        width:60%;
+        padding: 5%;
+        
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 140%;
+        font: bold;
+        background-color: antiquewhite
+}
+
+.contenedor-respuestas{
+    
+    padding-top: 5%;
+    
+}
+
+.botones{
+    padding: 1%;
+    background-color: antiquewhite;
+    width: 60%;
+    border-radius: 20px;
+    margin-top: 1%;
+    border: 3px solid gray;
+}
+
+
+.mymodal{
+    position: absolute;
+    text-align: center;
+    top: 30%;    
+    width:100%;
+    display: none;
+}
+.winner{
+    position: absolute;
+    text-align: center;
+    top: 30%;    
+    width:100%;
+    display: none;
+}
+.looser{
+    position: absolute;
+    text-align: center;
+    top: 30%;    
+    width:100%;
+    display: none;
+}

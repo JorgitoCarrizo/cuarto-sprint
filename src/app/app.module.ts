@@ -22,6 +22,8 @@ import * as bootstrap from "bootstrap";
 import { MayorMenorComponent } from './page/mayor-menor/mayor-menor.component';
 import { ChatRoomComponent } from './page/chat-room/chat-room.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PreguntadosComponent } from './page/preguntados/preguntados.component';
+import { FutbolQuizComponent } from './page/futbol-quiz/futbol-quiz.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     MayorMenorComponent,
     ChatRoomComponent,
+    PreguntadosComponent,
+    FutbolQuizComponent,
  
   ],
   imports: [
