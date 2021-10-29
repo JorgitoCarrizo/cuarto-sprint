@@ -1,1 +1,63 @@
-<p>futbol-quiz works!</p>
+<app-navbar></app-navbar>
+<app-chat-room></app-chat-room>
+
+<div class="back" id="back">
+
+    <div class="contenedor-principal">
+        <div id="contenedor-equipos">
+            <button id="0" style="background-image: Url('{{misEquiposArray[0]?.equipo}}')" class="botones botones-equipos" (click)="actionMethod($event)"></button>
+            <button id="1" style="background-image: Url('{{misEquiposArray[1]?.equipo}}')" class="botones botones-equipos" (click)="actionMethod($event)"></button>
+            <button id="2" style="background-image: Url('{{misEquiposArray[2]?.equipo}}')" class="botones botones-equipos" (click)="actionMethod($event)"></button>
+        </div>
+        <div id="contenedor-paises">
+            <button id="Argentina" style="background-image: Url('https://play-lh.googleusercontent.com/35tCUyBIoqJXTU4LCNzG4i3Uds1Y6YV_k_PQn7EC3VcvkhtS1b0_I09zi7e9OawDujI')" class="paises botones" (click)="actionMethod($event)"></button>
+            <button id="Italia" style="background-image: Url('data:image/png;base64,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')" class="paises botones" (click)="actionMethod($event)"></button>
+            <button id="Espana" style="background-image: Url('https://1000marcas.net/wp-content/uploads/2020/03/Spanish-La-Liga-Logo-1993-1.png')" class="paises botones" (click)="actionMethod($event)"></button>
+        </div>
+    </div>
+
+    
+</div>
+
+
+<div class="winner" tabindex="-1" role="dialog" id="winner" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">WINNER!!!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)=CloseWinner()>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2>FELICITACIONES GANASTE!!!</h2>
+        </div>
+        <div style="display: block;" class="modal-footer">
+          <P>¿piensas que fue suerte?¿jugar nuevamente?</P>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="CloseWinner()">POR SUPUESTO!!!</button>
+          <button type="button" class="btn btn-secondary" (click)="irInicio()">no, volver a inicio</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+<div class="looser" tabindex="-1" role="dialog" id="looser" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">LOOSER!!!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)=CloseLooser()>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2>HAS PERDIDO!!!</h2>
+        </div>
+        <div style="display: block;" class="modal-footer">
+          <P>¿prueba otra vez?</P>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="CloseLooser()">POR SUPUESTO!!!</button>
+          <button type="button" class="btn btn-secondary" (click)="irInicio()">no, volver a inicio</button>
+        </div>
+      </div>
+    </div>
+  </div> 

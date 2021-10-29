@@ -5,6 +5,7 @@ import { AhorcadoComponent } from './page/ahorcado/ahorcado.component';
 import { BienvenidoComponent } from './page/bienvenido/bienvenido.component';
 import { ChatRoomComponent } from './page/chat-room/chat-room.component';
 import { ErrorComponent } from './page/error/error.component';
+import { FutbolQuizComponent } from './page/futbol-quiz/futbol-quiz.component';
 import { LoginComponent } from './page/login/login.component';
 import { MayorMenorComponent } from './page/mayor-menor/mayor-menor.component';
 import { PreguntadosComponent } from './page/preguntados/preguntados.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'mayorMenor',component:MayorMenorComponent},
   {path:'preguntados',component:PreguntadosComponent},
+  {path:'futbolQuiz',component:FutbolQuizComponent},
   
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];

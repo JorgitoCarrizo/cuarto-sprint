@@ -36,7 +36,7 @@ export class BienvenidoComponent implements OnInit {
     this.rutas.navigate(['/preguntados']);
   }
   futbol(){
-
+    this.rutas.navigate(['/futbolQuiz']);
   }
 
 }

@@ -1,0 +1,43 @@
+.back{
+    background-image: url("https://image.freepik.com/free-vector/vector-green-soccer-field-football-field-gridiron_1284-41290.jpg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.botones{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+}
+
+.contenedor-principal{
+    padding: 20%;
+    padding-top: 3%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.winner{
+    position: absolute;
+    text-align: center;
+    top: 30%;    
+    width:100%;
+    display: none;
+}
+.looser{
+    position: absolute;
+    text-align: center;
+    top: 30%;    
+    width:100%;
+    display: none;
+}
